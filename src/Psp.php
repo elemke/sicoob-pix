@@ -19,7 +19,7 @@ class Psp
      */
     public function __construct(array $scope)
     {
-        $dotenv = Dotenv::createImmutable('./');
+        $dotenv = Dotenv::createImmutable('../');
         $dotenv->load();
         $this->scope = implode(' ', $scope);
         $this->urlToken = $_ENV['SICOOBPIX_AMBIENTE_HOMOLOGACAO'] ? Endpoint::TOKEN_HOMOLOGACAO : Endpoint::TOKEN_PRODUCAO;
