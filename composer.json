@@ -1,0 +1,19 @@
+{
+  "name": "elemke/sicoob-pix",
+  "description": "Biblioteca integração Pix Sicoob",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Éder Lemke",
+      "email": "eder.lemke@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Elemke\\SicoobPix\\": "src/"
+    }
+  }
+}
