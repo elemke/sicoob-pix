@@ -11,12 +11,11 @@ class Cob
 
     private $psp;
     private $clientHttp;
-    public $debug = false;
 
-    public function __construct(Psp $psp)
+    public function __construct(Psp $psp, bool $debug = false)
     {
         $this->psp = $psp;
-        $this->clientHttp = new ClientHttp($psp->getToken(), $this->debug);
+        $this->clientHttp = new ClientHttp($psp->getToken(), $debug);
     }
 
     /**

@@ -1,4 +1,11 @@
 # Notas
 
-## Versão 1.0.0
-- Implementados métodos da tag Cob;
+## Versão v1.1.0
+
+- Implementação métodos da tag Webhook;
+- Correção debug requisições;
+- Correção arquivo .env
+
+## Versão v1.0.0
+
+- Implementação métodos da tag Cob;
