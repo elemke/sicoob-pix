@@ -3,3 +3,4 @@ composer.phar
 /certificados/
 /.idea
 .env
+teste.php
