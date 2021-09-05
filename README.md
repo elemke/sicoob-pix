@@ -36,7 +36,7 @@ Caso tenha dúvidas de como obter esses dados, consulte o site do Sicoob Develop
 #### Criar cobrança imediata
 
 ```phpt
-$scope = ['cob.read', 'cob.write'];
+$scope = ['cob.read', 'cob.write']; //Veja a lista completa na documentação do Banco Central
 $psp = new Psp($scope);
 
 $cobranca = [
@@ -86,6 +86,29 @@ $cobranca = [
 ];
 
 $cob->alterar($cobranca, 'xxxx');
+```
+
+#### Criar webhook
+
+```@phpt
+$scope = ['webhook.read', 'webhook.write']; //Veja a lista completa na documentação do Banco Central
+$psp = new Psp($scope);
+$webhook = new \Elemke\SicoobPix\Webhook($psp);
+$$webhook->criar('teste@teste.com', 'https://www.teste.com');
+```
+
+#### Consultar webhook
+
+```@phpt
+$webhook = new \Elemke\SicoobPix\Webhook($psp);
+$$webhook->consultar('teste@teste.com');
+```
+
+#### Deletar webhook
+
+```@phpt
+$webhook = new \Elemke\SicoobPix\Webhook($psp);
+$$webhook->deletar('teste@teste.com');
 ```
 
 #### Licença
