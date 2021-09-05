@@ -1,9 +1,7 @@
 ## Pacote integração PIX Sicoob
-
 Esse pacote oferece integração com a API PIX do sistema Sicoob, conforme documentação do Banco Central do Brasil.
 
 ### Observação
-<hr>
 Os endpoints disponibilizados por este pacote seguem a padronização do Banco Central (documentação aqui). Entretanto, o provedor de serviços de pagamento (PSP) pode não implementar todos eles.
 
 ### Instalação
