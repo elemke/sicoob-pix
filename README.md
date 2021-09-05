@@ -87,3 +87,6 @@ $cobranca = [
 
 $cob->alterar($cobranca, 'xxxx');
 ```
+
+#### Licença
+MIT
