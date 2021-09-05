@@ -4,8 +4,8 @@ Esse pacote oferece integração com a API PIX do sistema Sicoob, conforme docum
 
 #### Observação
 
-Os endpoints disponibilizados por este pacote seguem a padronização do Banco Central [documentação aqui](https://bacen.github.io/pix-api/). Entretanto, o provedor de serviços de pagamento (PSP) pode não implementar
-todos eles.
+Os endpoints disponibilizados por este pacote seguem a padronização do Banco Central: [Link Documentação](https://bacen.github.io/pix-api/). Entretanto, o provedor de serviços de
+pagamento (PSP) pode não implementar todos eles.
 
 <hr>
 
@@ -89,4 +89,5 @@ $cob->alterar($cobranca, 'xxxx');
 ```
 
 #### Licença
+
 MIT
