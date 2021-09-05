@@ -90,25 +90,25 @@ $cob->alterar($cobranca, 'xxxx');
 
 #### Criar webhook
 
-```@phpt
+```phpt
 $scope = ['webhook.read', 'webhook.write']; //Veja a lista completa na documentação do Banco Central
 $psp = new Psp($scope);
 $webhook = new \Elemke\SicoobPix\Webhook($psp);
-$$webhook->criar('teste@teste.com', 'https://www.teste.com');
+$webhook->criar('teste@teste.com', 'https://www.teste.com');
 ```
 
 #### Consultar webhook
 
-```@phpt
+```phpt
 $webhook = new \Elemke\SicoobPix\Webhook($psp);
-$$webhook->consultar('teste@teste.com');
+$webhook->consultar('teste@teste.com');
 ```
 
 #### Deletar webhook
 
-```@phpt
+```phpt
 $webhook = new \Elemke\SicoobPix\Webhook($psp);
-$$webhook->deletar('teste@teste.com');
+$webhook->deletar('teste@teste.com');
 ```
 
 #### Licença
