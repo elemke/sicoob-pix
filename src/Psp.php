@@ -20,7 +20,7 @@ class Psp
     public function __construct(array $scope)
     {
         $path = './';
-        if (strpos(realpath(__DIR__), 'vendor')) {
+        if (strpos(realpath(__DIR__), 'public')) {
             $path = "../";
         }
         $dotenv = Dotenv::createImmutable($path);

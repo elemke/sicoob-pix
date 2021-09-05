@@ -1,5 +1,10 @@
 # Notas
 
+## Versão v1.1.1
+
+- Correção arquivo .env
+- Melhorias exemplos
+
 ## Versão v1.1.0
 
 - Implementação métodos da tag Webhook;
