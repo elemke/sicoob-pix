@@ -17,7 +17,7 @@ composer require elemke/sicoob-pix
 
 ### Configurações Iniciais
 
-Configure as variáveis do pacote no seu arquivo .env (caso ele não exista, crie na pasta raíz do seu projeto)
+Configure as variáveis do pacote no seu arquivo .env (caso ele não exista, crie na pasta raiz do seu projeto)
 
 ```phpt
 SICOOBPIX_CLIENT_ID='xxxxx'
