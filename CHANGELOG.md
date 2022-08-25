@@ -1,5 +1,11 @@
 # Notas
 
+## Versão v2.0.0
+
+- Alteração arquivo .env
+- Alteração endpoints;
+- Alteração path certificados;
+
 ## Versão v1.1.1
 
 - Correção arquivo .env
