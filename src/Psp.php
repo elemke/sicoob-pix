@@ -26,8 +26,8 @@ class Psp
         $dotenv = Dotenv::createImmutable($path);
         $dotenv->load();
         $this->scope = implode(' ', $scope);
-        $this->urlToken = $_ENV['SICOOBPIX_AMBIENTE_HOMOLOGACAO'] ? Endpoint::TOKEN_HOMOLOGACAO : Endpoint::TOKEN_PRODUCAO;
-        $this->baseUrlPix = $_ENV['SICOOBPIX_AMBIENTE_HOMOLOGACAO'] ? Endpoint::PIX_HOMOLOGACAO : Endpoint::PIX_PRODUCAO;
+        $this->urlToken = Endpoint::URL_AUTENTICACAO;
+        $this->baseUrlPix = Endpoint::URL_PIX;
         $this->certificadoPublico = [$_ENV['SICOOBPIX_CAMINHO_CERT_PUBLICO'], $_ENV['SICOOBPIX_SENHA_CERT_PUBLICO']];
         $this->certificadoPrivado = [$_ENV['SICOOBPIX_CAMINHO_CERT_PRIVADO'], $_ENV['SICOOBPIX_SENHA_CERT_PRIVADO']];
     }
