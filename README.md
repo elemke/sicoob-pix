@@ -7,6 +7,9 @@ Esse pacote oferece integração com a API PIX do sistema Sicoob, conforme docum
 Os endpoints disponibilizados por este pacote seguem a padronização do Banco Central: [Link Documentação](https://bacen.github.io/pix-api/). Entretanto, o provedor de serviços de
 pagamento (PSP) pode não implementar todos eles.
 
+#### Pacote Postman
+(https://documenter.getpostman.com/view/20565799/UzBnrmod#intro)
+
 <hr>
 
 ### Instalação
