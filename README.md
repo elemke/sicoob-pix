@@ -22,7 +22,6 @@ Configure as variáveis do pacote no seu arquivo .env (caso ele não exista, cri
 ```phpt
 SICOOBPIX_CLIENT_ID='xxxxx'
 SICOOBPIX_CLIENT_SECRET='xxxxx'
-SICOOBPIX_AMBIENTE_HOMOLOGACAO=true
 SICOOBPIX_CAMINHO_CERT_PUBLICO='./path/file.pem'
 SICOOBPIX_SENHA_CERT_PUBLICO='xxx'
 SICOOBPIX_CAMINHO_CERT_PRIVADO='./path/file.key'

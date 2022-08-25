@@ -12,6 +12,7 @@ class Psp
     private $certificadoPublico;
     private $certificadoPrivado;
     private $token;
+    private $timeToken;
 
     /**
      * Realiza conexão com o ambiente do Sicoob
@@ -26,10 +27,10 @@ class Psp
         $dotenv = Dotenv::createImmutable($path);
         $dotenv->load();
         $this->scope = implode(' ', $scope);
-        $this->urlToken = $_ENV['SICOOBPIX_AMBIENTE_HOMOLOGACAO'] ? Endpoint::TOKEN_HOMOLOGACAO : Endpoint::TOKEN_PRODUCAO;
-        $this->baseUrlPix = $_ENV['SICOOBPIX_AMBIENTE_HOMOLOGACAO'] ? Endpoint::PIX_HOMOLOGACAO : Endpoint::PIX_PRODUCAO;
-        $this->certificadoPublico = [$_ENV['SICOOBPIX_CAMINHO_CERT_PUBLICO'], $_ENV['SICOOBPIX_SENHA_CERT_PUBLICO']];
-        $this->certificadoPrivado = [$_ENV['SICOOBPIX_CAMINHO_CERT_PRIVADO'], $_ENV['SICOOBPIX_SENHA_CERT_PRIVADO']];
+        $this->urlToken = Endpoint::URL_AUTENTICACAO;
+        $this->baseUrlPix = Endpoint::URL_PIX;
+        $this->certificadoPublico = [realpath($_ENV['SICOOBPIX_CAMINHO_CERT_PUBLICO']), $_ENV['SICOOBPIX_SENHA_CERT_PUBLICO']];
+        $this->certificadoPrivado = [realpath($_ENV['SICOOBPIX_CAMINHO_CERT_PRIVADO']), $_ENV['SICOOBPIX_SENHA_CERT_PRIVADO']];
     }
 
 
@@ -51,6 +52,7 @@ class Psp
                 'ssl_key' => $this->certificadoPrivado
             ]);
             $this->token = $response->getBody()->getContents();
+            $this->timeToken = time();
         } catch (\Exception $exc) {
             throw $exc;
         }
@@ -66,7 +68,7 @@ class Psp
             $this->gerarToken();
         }
         $token = json_decode($this->token);
-        $tokenExpiracao = $token->consented_on + $token->expires_in;
+        $tokenExpiracao = $this->timeToken + $token->expires_in;
         if ($tokenExpiracao < time()) {
             $this->gerarToken();
         }

@@ -13,8 +13,8 @@ class ClientHttp
     {
         $this->token = $token;
         $this->debug = $debug;
-        $this->certificadoPublico = [$_ENV['SICOOBPIX_CAMINHO_CERT_PUBLICO'], $_ENV['SICOOBPIX_SENHA_CERT_PUBLICO']];
-        $this->certificadoPrivado = [$_ENV['SICOOBPIX_CAMINHO_CERT_PRIVADO'], $_ENV['SICOOBPIX_SENHA_CERT_PRIVADO']];
+        $this->certificadoPublico = [realpath($_ENV['SICOOBPIX_CAMINHO_CERT_PUBLICO']), $_ENV['SICOOBPIX_SENHA_CERT_PUBLICO']];
+        $this->certificadoPrivado = [realpath($_ENV['SICOOBPIX_CAMINHO_CERT_PRIVADO']), $_ENV['SICOOBPIX_SENHA_CERT_PRIVADO']];
     }
 
     public function requisicao(string $metodo, string $url, array $body = null)
