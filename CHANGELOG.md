@@ -1,5 +1,11 @@
 # Notas
 
+## Versão v2.1.0
+
+- Alteração arquivo .env
+- Alteração endpoints;
+- Alteração forma requisição
+
 ## Versão v2.0.0
 
 - Alteração arquivo .env

@@ -45,7 +45,6 @@ class Psp
                 'form_params' => [
                     'grant_type' => 'client_credentials',
                     'client_id' => $_ENV['SICOOBPIX_CLIENT_ID'],
-                    'client_secret' => $_ENV['SICOOBPIX_CLIENT_SECRET'],
                     'scope' => $this->scope
                 ],
                 'cert' => $this->certificadoPublico,
